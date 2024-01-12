@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./index.css";
 
-function App() {
+import 'simplebar';
+import 'simplebar/dist/simplebar.css';
+import Sidebar from "./components/Sidebar";
+import ListChat from "./components/ListChat";
+import DetailChat from "./components/DetailChat";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full h-auto min-h-screen lg:flex">
+      <Sidebar></Sidebar>
+      <ListChat></ListChat>
+      <DetailChat></DetailChat>
     </div>
   );
-}
+};
 
 export default App;
